@@ -1,0 +1,118 @@
+a {
+  style: none;
+  text-decoration: none;
+}
+
+.main {
+  margin-top: 55px;
+}
+
+.splash-page{
+ color: white;
+ background: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),url("http://www.imax.com/sites/default/files/styles/movie_1500x580/public/movies/slider_image/ABP_MovieSliderImage_1500x580.jpg?itok=cHta4Oie");
+ background-position: center;
+ background-size: cover;
+ font-weight: 300;
+ height: 1000px;
+}
+
+.splash-box-lg {
+  width: 800px;
+  height: 300px;
+  margin: auto;
+}
+
+.splash-box-sm {
+  width: 600px;
+  height: 300px;
+  margin: auto;
+}
+
+.splash-image {
+  width: 450px;
+  height: 100px;
+}
+
+.splash-words {
+ color: white;
+ font-weight: 100;
+ font-size: 24px;
+ letter-spacing: .06em;
+}
+
+.box {
+  color: white;
+  width: 375px;
+  margin: auto;
+}
+
+.navbar {
+  border-bottom: 5px solid #0695FF;
+}
+
+.nav-logo {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.border {
+  border: 1px solid green;
+}
+
+.search-result {
+  background: rgba(255, 255, 255, .3);
+  height: 70px;
+  font-size: 17px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.search-result:hover {
+  background: rgba(255, 255, 255, .5);
+  cursor: pointer;
+}
+
+.search-result-img {
+  height: 70px;
+  width: 45px;
+  padding: 5px 5px 5px 5px;
+}
+
+.search-result-info {
+  margin-left: 10px;
+  font-weight: 0.04em;
+}
+
+.show-txt {
+ letter-spacing: .08em;
+ font-weight: 100;
+}
+.movie-poster-show {
+  height: 200px;
+}
+
+.movie-header {
+  font-weight: 200;
+}
+
+.movie-header-year {
+  color: gray;
+  font-size: 25px;
+}
+
+.movie-header-subtext {
+  font-size: 17px;
+  font-weight: 100;
+}
+
+.bolder {
+  font-weight: 300;
+}
+
+.top-margin {
+  margin-top: 10px;
+}
+
+.padding-right {
+  padding-right: 10px;
+}

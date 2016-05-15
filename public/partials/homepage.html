@@ -1,0 +1,21 @@
+<div class="splash-page">
+  </br></br>
+  <div class="splash-box-lg">
+  <div class="splash-words">
+    Search, discover, and connect with the movies that matter to you most.
+  </div>
+  </br>
+  <div class="splash-box-sm">
+    <form role="form">
+      <div class="form-group">
+         <!--  Consider ng-model="searchTerm". ng-model connects searchTerm to our data
+         model for this view. This accessible in the controller through 'scope' -->
+        <input ng-change="search()" class="form-control" ng-model="searchTerm" type="text">
+      </div>
+    </form>
+    <div ng-repeat="result in searchResults">
+      <search-result movie-data="result" />
+    </div>
+  </div>
+  </div>
+</div>

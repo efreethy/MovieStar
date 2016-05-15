@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title Movie Star
+    link(rel='shortcut icon', href='images/MovieStar-favicon.png')
+    link(rel='stylesheet' href='vendor/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet' href='vendor/bootstrap/dist/css/bootstrap-theme.min.css')
+    link(rel='stylesheet' href='stylesheets/styles.css')
+    script(src='vendor/jquery/dist/jquery.min.js')
+  body
+    nav(class="navbar navbar-default navbar-fixed-top select-lite-navbar")
+      div(class="container-fluid")
+        div(class="navbar-header")
+          a(class="pull-left" href="/")
+            img(class="nav-logo" alt="MovieStar" src='/images/MovieStar-logo.png')
+    div(class="main splash-page")
+     div(class="row")
+       each msg in messages
+         div(class="col col-md-4 col-sm-offset-3 alert alert-warning")= msg
+       div(class="col col-md-4 col-sm-offset-3 top-margin")
+        h1 Guest sign in
+        form.login-form(role='form' action='/login' method='post')
+          .form-group
+            label(for='user') User
+            select(id="users" class="form-control")
+              each guest, i in guests
+                option(value=guest.username) #{guest.username}
+          .form-group
+              input#user.form-control(type='hidden' name='username' required)
+              input#password.form-control(type='hidden' name='password' required)
+          button#submit-btn.btn.btn-success(type='submit') Log in
+    script(src='javascripts/guest_login.js')

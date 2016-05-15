@@ -1,0 +1,16 @@
+<div  ng-init="initializeFavorites()" class="splash-page show-txt">
+  <div  class="row">
+    <div class="col col-md-6 col-md-offset-3">
+      <div class="row">
+         <h1 class="movie-header">Favorites</h1>
+         <h4 ng-show="favorites.length == 0">You have no favorited movies at this time</h4>
+         <a ng-repeat="movie in favorites" href="{{'/#/movies/' + movie.imdbID}}" style="text-decorations:none; color:inherit;" >
+           <div class="search-result">
+             <img class="search-result-img" src="{{movie.Poster}}" />
+             <span class="search-result-info">{{movie.Title}}, {{movie.Year}}</span>
+           </div>
+         </a>
+       </div>
+    </div>
+  </div>
+</div>

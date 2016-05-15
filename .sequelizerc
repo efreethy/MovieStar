@@ -1,0 +1,6 @@
+var configDirectory = process.env.NODE_ENV || 'development';
+
+// return the database configuration settings for the Sequelize ORM.
+module.exports = {
+  "config": "./configFiles/" + configDirectory + "/config.js"
+};

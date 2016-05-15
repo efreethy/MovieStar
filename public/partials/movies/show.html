@@ -1,0 +1,35 @@
+<div  ng-init="initialize()" class="splash-page show-txt">
+  <div ng-show="!loadingMovie"class="row">
+    <div class="col col-md-6 col-md-offset-3">
+      <div class="row">
+         <h1 class="movie-header">{{movie.Title}}
+           <span class="movie-header-year">({{movie.Year}})</span>
+           <span class="pull-right">
+             <form action="/favorites" method="post">
+              <input type="hidden" name="imdbID" value="{{movie.imdbID}}">
+              <input type="hidden" name="method" value="{{movieIsFavorited ? 'destroy' : 'create' }}" />
+              <button type="submit" value="submit"=
+                      ng-class="{'btn btn-primary': !movieIsFavorited, 'btn btn-default': movieIsFavorited}">
+                      {{movieIsFavorited ? 'Unfavorite' : 'Favorite'}}</button>
+             </form>
+           </span>
+         </h1>
+         <h3 class="movie-header-subtext">{{movie.Genre}} |  {{movie.Released}}</h3>
+      </div></br>
+       <div class="row">
+         <div class="col col-md-4">
+           <img src="{{movie.Poster}}" class="movie-poster-show" />
+         </div>
+         <div class="col col-md-8">
+          <div class="row"> {{movie.Plot}}</div>
+          <br/>
+          <div class="row top-margin"> <span class="bolder">Director:</span> {{movie.Director}}</div>
+          <div class="row top-margin"> <span class="bolder">Writers:</span> {{movie.Writer}}</div>
+          <div class="row top-margin"> <span class="bolder">Stars:</span> {{movie.Actors}}</div>
+          <div class="row top-margin"> <span class="bolder">imdbRating:</span> {{movie.imdbRating}}</div>
+          <div class="row top-margin"> <span class="bolder">imdbVotes:</span> {{movie.imdbVotes}}</div>
+         </div>
+       </div>
+    </div>
+  </div>
+</div>

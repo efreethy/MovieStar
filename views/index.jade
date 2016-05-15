@@ -1,0 +1,22 @@
+extends layout
+
+block body
+  div(ng-app="movieStar")
+    div(ng-controller="RootController" ng-init="initialize()")
+    nav(class="navbar navbar-default navbar-fixed-top")
+      div(class="container-fluid")
+        div(class="navbar-header")
+          a(class="pull-left" href="/#/")
+            img(class="nav-logo" alt="MovieStar" src='/images/MovieStar-logo.png')
+        ul.nav.navbar-nav.navbar-right
+          li(ng-if="sessionUserName")
+            a(href='/#/favorites' class="padding-right") Favorites
+          li.dropdown
+            a.dropdown-toggle(data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+              p(ng-if="sessionUserName" class="navbar-username"){{sessionUserName}}
+                span.caret
+            ul.dropdown-menu
+              li
+                a(href='/logout') logout
+    div(class="main")
+      div(ng-view)
