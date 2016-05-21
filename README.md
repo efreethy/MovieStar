@@ -23,6 +23,6 @@
 
 ### Comments
 
-This application was built with the expectation that it be accessible to beginners in web application programming. Some topics have been glossed over for the sake of reducing the learning curve as well as time. This includes testing, advanced authentication (session tokens/password hashing), error handling, and server side controllers and services.
+This application was built with the expectation that it be accessible to beginners in web application programming. Some topics have been glossed over for the sake of reducing the learning curve as well as time. This includes testing, advanced authentication (session tokens/password hashing), error handling, logging, and server side controllers and services.
 
 Comments are peppered throughout the application in order to explain general relationships between parts of the app.  In order to fully teach these topics, my next step would be to create docs that explain the various parts of the application and the frameworks more deeply. Also, a healthy discussion can really go a long way in developing a student's understanding.
